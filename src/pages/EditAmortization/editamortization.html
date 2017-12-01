@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Amortization</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-list>
+		<ion-item *ngFor="let amortization of amortizations" (click) = "viewDetails(store.name)">
+			<div>{{amortization.PaymentNumber}}</div>
+			<div>{{amortization.PaymentDate}}</div>
+			<div>{{amortization.ScheduledPayment}}</div>
+		</ion-item>
+  </ion-list>-->
+  
+  <ion-grid ng-class="table">
+	<ion-row>
+		<ion-col>Paid?</ion-col>
+		<ion-col width="5">S.No</ion-col>
+		<ion-col width="20">Payment Date</ion-col>
+		<!--<ion-col width="20">{{amortization.ScheduledPayment}}</ion-col>
+		<ion-col width="20">{{amortization.BeginningBalance}}</ion-col>
+		<ion-col width="20">{{amortization.Interest}}</ion-col>-->
+		<ion-col width="20">EndingBalance</ion-col>
+		<ion-col width="20">Total Principal</ion-col>
+		<ion-col width="20">Total Interest</ion-col>
+	</ion-row>
+	<ion-row wrap *ngFor="let amortization of amortizations">
+		<ion-col>
+			<ion-checkbox> {{amortization.IsPaid}}</ion-checkbox>
+		</ion-col>
+		<ion-col width="5">{{amortization.PaymentNumber}}</ion-col>
+		<ion-col width="20">{{amortization.PaymentDate | date:'dd-MMM-yyyy'}}</ion-col>
+		<!--<ion-col width="20">{{amortization.ScheduledPayment}}</ion-col>
+		<ion-col width="20">{{amortization.BeginningBalance}}</ion-col>
+		<ion-col width="20">{{amortization.Interest}}</ion-col>-->
+		<ion-col width="20">{{amortization.EndingBalance | number:'1.2-2'}}</ion-col>
+		<ion-col width="20">{{amortization.Principal | number:'1.2-2'}}</ion-col>
+		<ion-col width="20">{{amortization.CumulativeInterest | number:'1.2-2'}}</ion-col>
+	</ion-row>
+  </ion-grid>
+
+</ion-content>

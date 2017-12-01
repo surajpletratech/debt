@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Home loan</ion-title>
+	<ion-buttons end>
+		<button ion-button (click)="saveHomeLoan()">
+			Save
+		</button>
+	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list no-lines>
+		<form [formGroup]="slideOneForm" (ngSubmit)="Calculate()">
+
+			<ion-item>
+				<ion-label floating>Loan Amount</ion-label>
+				<ion-input formControlName="loanAmount" type="number"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Annual interest rate</ion-label>
+				<ion-input formControlName="rate" type="number" step=0.001></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Loan Period in years</ion-label>
+				<ion-input formControlName="term" type="number"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+				<ion-label floating>Start Date</ion-label>
+				<ion-datetime displayFormat="MMM DD, YYYY" formControlName="startDate"></ion-datetime>
+			</ion-item>
+			<button ion-button type="submit" block>Calculate</button>
+		</form>
+		
+	</ion-list>
+	<ion-list *ngIf="myData">
+		<ion-item>Monthly Payment: <strong>{{ monthlyPayment }}</strong></ion-item>
+		<ion-item>Total Interest: <strong>{{ totalInterest }}</strong></ion-item>
+		<ion-item>Total Payment: <strong>{{ totalPayment }}</strong></ion-item>
+	</ion-list>
+	<button ion-button *ngIf="myData" type="button" (click)="CalculateAmortization()" block>Amortization</button>
+</ion-content>
