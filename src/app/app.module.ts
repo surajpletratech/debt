@@ -12,6 +12,8 @@ import { Settings } from '../pages/settings/settings';
 import { AddHomeLoan } from '../pages/AddHomeLoan/addhomeloan';
 import { Amortization } from '../pages/Amortization/amortization';
 import { EditAmortization } from '../pages/EditAmortization/editamortization';
+import { AddAutoLoan } from '../pages/AddAutoLoan/AddAutoLoan';
+import { AddPersonalLoan } from '../pages/AddPersonal/AddPersonalLoan';
 import {APP_PROVIDERS} from './app.providers'
 
 @NgModule({
@@ -25,7 +27,9 @@ import {APP_PROVIDERS} from './app.providers'
 	Settings,
 	AddHomeLoan,
 	Amortization,
-	EditAmortization
+      EditAmortization,
+      AddAutoLoan,
+      AddPersonalLoan
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,7 +45,9 @@ import {APP_PROVIDERS} from './app.providers'
 	Settings,
 	AddHomeLoan,
 	Amortization,
-	EditAmortization
+      EditAmortization,
+      AddAutoLoan,
+      AddPersonalLoan
   ],
   providers: [APP_PROVIDERS]
 })
