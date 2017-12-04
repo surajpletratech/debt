@@ -11,3 +11,51 @@
         </ion-buttons>
     </ion-navbar>
 </ion-header>
+
+<ion-content padding>
+   <ion-list>
+          
+		  <form>
+			
+			<ion-item>
+				<ion-label floating>Loan Amount</ion-label>
+				<ion-input type="number"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Annual interest rate</ion-label>
+				<ion-input type="number" step=0.001></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label >Loan Period in years</ion-label>
+				<ion-select>
+                    <ion-option>1</ion-option>
+					<ion-option>2</ion-option>
+					<ion-option>3</ion-option>
+					<ion-option>4</ion-option>
+					<ion-option>5</ion-option>
+				</ion-select>	
+			</ion-item>
+			
+			<ion-item>
+				<ion-label floating>Start Date</ion-label>
+				<ion-datetime displayFormat="MMM DD, YYYY"></ion-datetime>
+			</ion-item>
+			
+			<ion-item>
+				<ion-label floating>Monthly Payment</ion-label>
+				<ion-input  type="number"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>Balance</ion-label>
+				<ion-input type="number"></ion-input>
+			</ion-item>
+			
+			<button ion-button block>Save</button>
+			
+		 </form>
+    
+	</ion-list>
+</ion-content> 
