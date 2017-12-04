@@ -10,18 +10,19 @@ import { AddHomeLoan } from '../AddHomeLoan/addhomeloan';
   selector: 'page-mortgage',
   templateUrl: 'mortgage.html'
 })
+
 export class Mortgage {
 
 	v1: Array<number> = [];
 
   constructor(public navCtrl: NavController) {
     for(let i=0; i< 6; i ++) {
-		this.v1.push(i);
+		  this.v1.push(i);
 	}
   }
   
   addHomeLoan() {
-	this.navCtrl.push(AddHomeLoan);
+	  this.navCtrl.push(AddHomeLoan);
   }
 
 }
