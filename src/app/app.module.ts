@@ -14,6 +14,14 @@ import { Amortization } from '../pages/Amortization/amortization';
 import { EditAmortization } from '../pages/EditAmortization/editamortization';
 import { AddAutoLoan } from '../pages/AddAutoLoan/AddAutoLoan';
 import { AddPersonalLoan } from '../pages/AddPersonal/AddPersonalLoan';
+import { AutoLoanDetails } from '../pages/autoloandetails/autoloandetails';
+import { PersonalLoanDetails } from '../pages/persondetails/persondetails';
+import { MortgageDetails } from '../pages/mortgagedetails/mortgagedetail';
+import { EditMortgageDetails } from '../pages/mortgagedetails/editmortgage';
+import { EditPersonalLoan } from '../pages/persondetails/editpersonloan';
+import { EditAutoLoan } from '../pages/autoloandetails/editautoloan';
+
+
 import {APP_PROVIDERS} from './app.providers'
 
 @NgModule({
@@ -29,7 +37,7 @@ import {APP_PROVIDERS} from './app.providers'
 	Amortization,
       EditAmortization,
       AddAutoLoan,
-      AddPersonalLoan
+      AddPersonalLoan, AutoLoanDetails, PersonalLoanDetails, MortgageDetails, EditPersonalLoan, EditAutoLoan, EditMortgageDetails
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -47,7 +55,7 @@ import {APP_PROVIDERS} from './app.providers'
 	Amortization,
       EditAmortization,
       AddAutoLoan,
-      AddPersonalLoan
+      AddPersonalLoan, AutoLoanDetails, PersonalLoanDetails, MortgageDetails, EditPersonalLoan, EditAutoLoan, EditMortgageDetails
   ],
   providers: [APP_PROVIDERS]
 })
