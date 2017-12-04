@@ -4,55 +4,67 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Debt Manager</ion-title>
-	<ion-buttons end>
-		<button ion-button (click)="addHomeLoan()">
-			<ion-icon name="add"></ion-icon>
-		</button>
-	</ion-buttons>	
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<div *ngIf="isLoansAvailable">
-	 <ion-card  *ngFor="let val of v1">
-
-	  <ion-item>
-		<ion-icon name="home"></ion-icon>
-		<ion-row>
-			<ion-col>
-				<h2>Paramus house</h2>
-			</ion-col>
-			<ion-col>
-				<h2>Mortgage</h2>
-			</ion-col>
-		</ion-row>
-	  </ion-item>
-
-	  <ion-card-content>
-		<ion-row>
-			<ion-col>Loam amount : </ion-col> 
-			<ion-col>$300000</ion-col>
-		</ion-row>
-		<ion-row>
-			<ion-col>Remaining amount : </ion-col>
-			<ion-col>$250000</ion-col>
-		</ion-row>
-		<ion-row>
-			<ion-col>Rate : </ion-col>
-			<ion-col>3.25%</ion-col>
-		</ion-row>
-		
-	  </ion-card-content>
-
-	  <ion-row>
-		<ion-col><p>310 Gorden Dr. Paramus</p></ion-col>
-		<ion-col right>
-		  <button ion-button icon-right clear small>
-			<div>Details</div>
-		  </button>
-		</ion-col>
-	  </ion-row>
-	</ion-card>
-	</div>
-	<ion-label *ngIf!="isLoansAvailable">You do not have any home loan saved</ion-label>	
+  <div *ngIf="isLoansAvailable">
+    <ion-card>
+      <ion-list>
+        <button ion-item (click)="debtItemClick('home')">
+          <ion-row>
+            <ion-col><ion-icon name="home"></ion-icon></ion-col>
+            <ion-col>Home </ion-col>
+            <ion-col>$300000</ion-col>
+          </ion-row>
+        </button>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-list>
+        <button ion-item (click)="debtItemClick('home')">
+          <ion-row>
+            <ion-col><ion-icon name="home"></ion-icon></ion-col>
+            <ion-col>Home </ion-col>
+            <ion-col>$300000</ion-col>
+          </ion-row>
+        </button>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-list>
+        <button ion-item (click)="debtItemClick('auto')">
+          <ion-row>
+            <ion-col><ion-icon name="car"></ion-icon></ion-col>
+            <ion-col>Auto </ion-col>
+            <ion-col>$25000</ion-col>
+          </ion-row>
+        </button>
+      </ion-list>
+    </ion-card>
+    <ion-card>
+      <ion-list>
+        <button ion-item (click)="debtItemClick('person')">
+          <ion-row>
+            <ion-col><ion-icon name="person"></ion-icon></ion-col>
+            <ion-col>Person </ion-col>
+            <ion-col>$15000</ion-col>
+          </ion-row>
+        </button>
+      </ion-list>
+    </ion-card>
+  </div>
+	<ion-label *ngIf!="isLoansAvailable">You do not have any loan saved</ion-label>	
 </ion-content>
+
+
+<!--
+<div class="item low-pad-item item-icon-right" ng-repeat="item in data.items | orderBy:sortData:data.sortReverse ">
+  <div class="flex-container wrap">
+    <div ng-repeat="column in data.columns">
+      <div class="column">{{item[column.id]}}&nbsp;</div>
+    </div>
+  </div>
+  <i class="icon ion-chevron-right icon-accessory"></i>
+</div>
+    -->

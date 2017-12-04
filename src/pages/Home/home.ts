@@ -2,9 +2,13 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { AddHomeLoan } from '../AddHomeLoan/addhomeloan';
+//import { AddHomeLoan } from '../AddHomeLoan/addhomeloan';
 import { DataService } from '../../shared/data.service';
 import { IHomeLoans } from '../../shared/interfaces';
+
+import { MortgageDetails } from '../mortgagedetails/mortgagedetail';
+import { AutoLoanDetails } from '../autoloandetails/autoloandetails';
+import { PersonalLoanDetails } from '../persondetails/persondetails';
 
 @Component({
   selector: 'page-home',
@@ -26,8 +30,12 @@ export class Home {
 	this.isLoansAvailable = true; // this.loans.length === 0;
   }
   
-  addHomeLoan() {
-	this.navCtrl.push(AddHomeLoan);
+  debtItemClick(item) {
+      if (item === "home")
+          this.navCtrl.push(MortgageDetails);
+      else if (item == "auto")
+          this.navCtrl.push(AutoLoanDetails);
+      else
+          this.navCtrl.push(PersonalLoanDetails);
   }
-
 }
