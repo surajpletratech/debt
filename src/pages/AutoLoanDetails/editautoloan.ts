@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { AutoLoanDetails } from './autoloandetails';
+import { IAutoLoan } from '../../shared/interfaces';
 
 @Component({
     selector: 'page-autoloan-edit',
@@ -8,8 +10,12 @@ import { NavController } from 'ionic-angular';
 })
 
 export class EditAutoLoan {
-    constructor(public navCtrl: NavController) {
 
+    autoLoan: IAutoLoan = null;
+
+    constructor(public navCtrl: NavController,
+        public navParam: NavParams) {
+        this.autoLoan = navParam.get("autoLoanData");
     }
 
     saveAutoLoan() {
