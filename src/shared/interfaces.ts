@@ -1,18 +1,30 @@
-export interface IHomeLoans {
-	key: number;
-	Name: string;
-	Address: string;
-	Amount: number;
-	Rate: number;
-	Term: number;
-	StartDate: string;
-	LenderName: string;
-	ScheduledPayment: number;
-	ScheduledNumberofPayment: number;
-	TotalInterest: number;
-	TotalAmountPaid: number;
-	TotalInterestPaid: number;
-	APR: number;
+export interface ILoans {
+    key: number;
+    Name: string;
+    Address: string;
+    Amount: number;
+    Rate: number;
+    Term: number;
+    StartDate: string;
+    LenderName: string;
+    ScheduledPayment: number;
+    ScheduledNumberofPayment: number;
+    TotalInterest: number;
+    TotalAmountPaid: number;
+    TotalInterestPaid: number;
+    APR: number;
+}
+
+export interface IHomeLoans extends ILoans {
+
+}
+
+export interface IPersonLoan extends ILoans {
+
+}
+
+export interface IAutoLoan extends ILoans {
+
 }
 
 export interface IHomeLoanAmortization {
