@@ -1,4 +1,4 @@
-﻿<ion-header>
+<ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
@@ -11,27 +11,65 @@
         </ion-buttons>
     </ion-navbar>
 </ion-header>
+
 <ion-content padding>
-    <ion-list>
-        <form>
-            <ion-item>
-                <ion-label>Loan Amount</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>Annual interest rate</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>Loan Period in years</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>Start Date</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>Monthly Payment</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label>Balance</ion-label>
-            </ion-item>
-        </form>
-    </ion-list>
+  
+          
+    <ion-grid>
+			
+	  <ion-row>
+        <ion-col>
+		   Loan Amount:
+		</ion-col>
+		<ion-col>
+        {{autoLoan.Amount}}
+        </ion-col>
+      </ion-row>
+      
+	  <ion-row>
+        <ion-col>
+		    Interest rate:
+		</ion-col> 
+        <ion-col>		 
+           {{autoLoan.Rate}}
+		</ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+		   Start Date
+		</ion-col>
+		<ion-col>
+		   {{autoLoan.StartDate}}
+        </ion-col>
+      </ion-row>
+	  
+      <ion-row>
+        <ion-col>
+		   Monthly Payment
+		</ion-col>
+        <ion-col>		
+		  {{autoLoan.ScheduledPayment}}
+		</ion-col>
+      </ion-row>
+	  
+      <ion-row>
+        <ion-col>
+		   TotalInterest
+		</ion-col>
+        <ion-col>		
+		   {{autoLoan.TotalInterest}}
+		</ion-col>
+	  </ion-row>
+	  
+	  <ion-row>
+        <ion-col>
+		    AmountPaid
+		</ion-col>
+        <ion-col>		
+		    {{autoLoan.AmountPaid}}
+		</ion-col>
+	  </ion-row>
+	   
+    </ion-grid>
 </ion-content> 
