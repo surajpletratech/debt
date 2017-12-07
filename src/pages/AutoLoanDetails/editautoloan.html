@@ -20,7 +20,7 @@
 				  Loan Amount
 				</ion-col>
 				<ion-col>
-				    <ion-input type="number" ng-model="autoLoan.Amount"></ion-input>
+				    <ion-input type="number" [(ngModel)]="autoLoan.Amount"></ion-input>
 				</ion-col>
 			</ion-row>
 
@@ -29,7 +29,7 @@
 				   Annual interest rate
 				</ion-col>
 				<ion-col>
-				  <ion-input type="number" ng-model="autoLoan.Rate"></ion-input>
+				  <ion-input type="number" [(ngModel)]="autoLoan.Rate"></ion-input>
 				</ion-col> 
 			</ion-row>
 
@@ -38,7 +38,7 @@
 				    Loan Period in years
 			    </ion-col>	
 				<ion-col>
-				   <ion-input type="number" ng-model="autoLoan.Term"></ion-input>
+				   <ion-input type="number" [(ngModel)]="autoLoan.Term"></ion-input>
  				</ion-col>
      		</ion-row>
 			
@@ -47,7 +47,7 @@
 				  Start Date
 				</ion-col>  
 			    <ion-col>
-				   <ion-input type="number" ng-model="autoLoan.StartDate"></ion-input>
+				   <ion-input type="date" [(ngModel)]="autoLoan.StartDate"></ion-input>
 			    </ion-col>
 			</ion-row>
 			
@@ -56,7 +56,7 @@
 				   Monthly Payment
 				</ion-col>
 				<ion-col>
-             		<ion-input type="number" ng-model="autoLoan.ScheduledPayment"></ion-input>
+             		<ion-input type="number" [(ngModel)]="autoLoan.ScheduledPayment"></ion-input>
 			    </ion-col>
 			</ion-row>
 
@@ -65,7 +65,7 @@
 				  TotalInterest
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="autoLoan.TotalInterest"></ion-input>
+				 <ion-input type="number" [(ngModel)]="autoLoan.TotalInterest"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -74,7 +74,7 @@
 				  AmountPaid 
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="autoLoan.TotalAmountPaid"></ion-input>
+				 <ion-input type="number" [(ngModel)]="autoLoan.TotalAmountPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -83,10 +83,14 @@
 				  InterestPaid
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="autoLoan.InterestPaid"></ion-input>
+				 <ion-input type="number" [(ngModel)]="autoLoan.TotalInterestPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
-			
-			<button ion-button block>Save</button>
+		
+		    <ion-row>
+			    <ion-col>
+			      <button ion-button block>Save</button>
+			    </ion-col>
+	 	    </ion-row>	
 	</ion-grid>		
 </ion-content> 
