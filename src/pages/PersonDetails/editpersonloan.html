@@ -17,6 +17,33 @@
 		 	
 			<ion-row align-items-center>
 				<ion-col width="90">
+				  Name
+				</ion-col>
+				<ion-col>
+				     <ion-input type="string" [(ngModel)]="personLoanDetails.Name"></ion-input>
+				</ion-col>
+			</ion-row>
+			
+			<ion-row align-items-center>
+				<ion-col width="90">
+				  Address
+				</ion-col>
+				<ion-col>
+				     <ion-input type="string" [(ngModel)]="personLoanDetails.Address"></ion-input>
+				</ion-col>
+			</ion-row>
+			
+			<ion-row align-items-center>
+				<ion-col width="90">
+				  Lender Name
+				</ion-col>
+				<ion-col>
+				     <ion-input type="string" [(ngModel)]="personLoanDetails.LenderName"></ion-input>
+				</ion-col>
+			</ion-row>
+			
+			<ion-row align-items-center>
+				<ion-col width="90">
 				  Loan Amount
 				</ion-col>
 				<ion-col>
@@ -47,7 +74,7 @@
 				  Start Date
 				</ion-col>  
 			    <ion-col>
-				    <ion-input type="string" [(ngModel)]="personLoanDetails.StartDate"></ion-input>
+				    <ion-input type="date" [(ngModel)]="personLoanDetails.StartDate"></ion-input>
 			    </ion-col>
 			</ion-row>
 			
