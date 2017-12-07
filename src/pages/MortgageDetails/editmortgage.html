@@ -15,17 +15,44 @@
 <ion-content padding>
    <ion-grid>
           
-		  <ion-row align-items-center>
+		   <ion-row align-items-center>
+				<ion-col>
+				  Name
+				</ion-col>
+				<ion-col>
+				     <ion-input type="number" [(ngModel)]="homeLoans.Name"></ion-input>
+				</ion-col>
+			 </ion-row>
+			
+			 <ion-row align-items-center>
+				<ion-col>
+				  Address
+				</ion-col>
+				<ion-col>
+				     <ion-input type="number" [(ngModel)]="homeLoans.Address"></ion-input>
+				</ion-col>
+			 </ion-row>
+			 
+			 <ion-row align-items-center>
+				<ion-col>
+				  Lender Name
+				</ion-col>
+				<ion-col>
+				     <ion-input type="number" [(ngModel)]="homeLoans.LenderName"></ion-input>
+				</ion-col>
+			 </ion-row>
+		  
+		     <ion-row align-items-center>
 				<ion-col>
 				  Loan Amount
 				</ion-col>
 				<ion-col>
 				     <ion-input type="number" [(ngModel)]="homeLoans.Amount"></ion-input>
 				</ion-col>
-			</ion-row>
+			 </ion-row>
 
-			<ion-row align-items-center>
-				<ion-col>
+			 <ion-row align-items-center>
+			 	<ion-col>
 				   Annual interest rate
 				</ion-col>
 				<ion-col>
