@@ -14,13 +14,13 @@
 
 <ion-content padding>
        <ion-grid>
-			
+		 	
 			<ion-row align-items-center>
 				<ion-col width="90">
 				  Loan Amount
 				</ion-col>
 				<ion-col>
-				    <ion-input type="number" ng-model="personLoanDetails.Amount"></ion-input>
+				     <ion-input type="number" [(ngModel)]="personLoanDetails.Amount"></ion-input>
 				</ion-col>
 			</ion-row>
 
@@ -29,7 +29,7 @@
 				   Annual interest rate
 				</ion-col>
 				<ion-col>
-				  <ion-input type="number" ng-model="personLoanDetails.Rate"></ion-input>
+				  <ion-input type="number" [(ngModel)]="personLoanDetails.Rate"></ion-input>
 				</ion-col> 
 			</ion-row>
 
@@ -38,7 +38,7 @@
 				    Loan Period in years
 			    </ion-col>	
 				<ion-col>
-				   <ion-input type="number" ng-model="personLoanDetails.Term"></ion-input>
+				    <ion-input type="number" [(ngModel)]="personLoanDetails.Term"></ion-input>
  				</ion-col>
      		</ion-row>
 			
@@ -47,7 +47,7 @@
 				  Start Date
 				</ion-col>  
 			    <ion-col>
-				   <ion-input type="number" ng-model="personLoanDetails.StartDate"></ion-input>
+				    <ion-input type="string" [(ngModel)]="personLoanDetails.StartDate"></ion-input>
 			    </ion-col>
 			</ion-row>
 			
@@ -56,7 +56,7 @@
 				   Monthly Payment
 				</ion-col>
 				<ion-col>
-             		<ion-input type="number" ng-model="personLoanDetails.ScheduledPayment"></ion-input>
+             		 <ion-input type="number" [(ngModel)]="personLoanDetails.ScheduledPayment"></ion-input>
 			    </ion-col>
 			</ion-row>
 
@@ -65,7 +65,7 @@
 				  TotalInterest
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="personLoanDetails.TotalInterest"></ion-input>
+				  <ion-input type="number" [(ngModel)]="personLoanDetails.TotalInterest"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -74,7 +74,7 @@
 				  AmountPaid 
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="personLoanDetails.TotalAmountPaid"></ion-input>
+				  <ion-input type="number" [(ngModel)]="personLoanDetails.TotalAmountPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -83,10 +83,14 @@
 				  InterestPaid
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="personLoanDetails.InterestPaid"></ion-input>
+				  <ion-input type="number" [(ngModel)]="personLoanDetails.TotalInterestPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
-			<button ion-button block>Save</button>
+         <ion-row>
+			<ion-col>
+			     <button ion-button block>Save</button>
+			</ion-col>
+		</ion-row>	
 	</ion-grid>		
 </ion-content> 
