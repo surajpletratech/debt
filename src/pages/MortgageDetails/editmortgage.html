@@ -1,4 +1,4 @@
-<ion-header>
+	<ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
@@ -16,11 +16,11 @@
    <ion-grid>
           
 		  <ion-row align-items-center>
-				<ion-col width="90">
+				<ion-col>
 				  Loan Amount
 				</ion-col>
 				<ion-col>
-				    <ion-input type="number" ng-model="homeLoan.Amount"></ion-input>
+				     <ion-input type="number" [(ngModel)]="homeLoans.Amount"></ion-input>
 				</ion-col>
 			</ion-row>
 
@@ -29,7 +29,7 @@
 				   Annual interest rate
 				</ion-col>
 				<ion-col>
-				  <ion-input type="number" ng-model="homeLoan.Rate"></ion-input>
+				  <ion-input type="number" [(ngModel)]="homeLoans.Rate"></ion-input>
 				</ion-col> 
 			</ion-row>
 
@@ -38,7 +38,7 @@
 				    Loan Period in years
 			    </ion-col>	
 				<ion-col>
-				   <ion-input type="number" ng-model="homeLoan.Term"></ion-input>
+				    <ion-input type="number" [(ngModel)]="homeLoans.Term"></ion-input>
  				</ion-col>
      		</ion-row>
 			
@@ -47,7 +47,7 @@
 				  Start Date
 				</ion-col>  
 			    <ion-col>
-				   <ion-input type="number" ng-model="homeLoan.StartDate"></ion-input>
+				    <ion-input type="date" [(ngModel)]="homeLoans.StartDate"></ion-input>
 			    </ion-col>
 			</ion-row>
 			
@@ -56,7 +56,7 @@
 				   Monthly Payment
 				</ion-col>
 				<ion-col>
-             		<ion-input type="number" ng-model="homeLoan.ScheduledPayment"></ion-input>
+             		 <ion-input type="number" [(ngModel)]="homeLoans.ScheduledPayment"></ion-input>
 			    </ion-col>
 			</ion-row>
 
@@ -65,7 +65,7 @@
 				  TotalInterest
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="homeLoan.TotalInterest"></ion-input>
+				  <ion-input type="number" [(ngModel)]="homeLoans.TotalInterest"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -74,7 +74,7 @@
 				  AmountPaid 
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="homeLoan.TotalAmountPaid"></ion-input>
+				  <ion-input type="number" [(ngModel)]="homeLoans.TotalAmountPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
@@ -83,10 +83,14 @@
 				  InterestPaid
 				</ion-col>
 				<ion-col>
-				 <ion-input type="number" ng-model="homeLoan.InterestPaid"></ion-input>
+				  <ion-input type="number" [(ngModel)]="homeLoans.TotalInterestPaid"></ion-input>
 				</ion-col> 
 			</ion-row>
 			
-			<button ion-button block>Save</button>
+         <ion-row>
+			<ion-col>
+			     <button ion-button block>Save</button>
+			</ion-col>
+		</ion-row>	
 	</ion-grid>
 </ion-content> 
