@@ -3,16 +3,53 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Personal Loans</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="addPersonalLoan()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>	
+    <ion-title>Personal Laon</ion-title>
+	<ion-buttons end>
+		<button ion-button (click)="addPersonalLoan()">
+			<ion-icon name="add"></ion-icon>
+		</button>
+	</ion-buttons>	
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Personal Loans</h3>
- 
+  <ion-card *ngFor="let val of v1">
+
+	   <ion-item>
+		  <ion-icon name="person"></ion-icon>
+		<ion-row>
+     		<ion-col>
+				<h2>Business</h2>
+			</ion-col>
+			<ion-col>
+				<h2>Personal Loan</h2>
+			</ion-col>
+		</ion-row>
+	  </ion-item>
+
+	  <ion-card-content>
+		<ion-row>
+			<ion-col>Loan amount : </ion-col> 
+			<ion-col>$100000</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>Remaining amount : </ion-col>
+			<ion-col>$500000</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>Rate : </ion-col>
+			<ion-col>5.25%</ion-col>
+		</ion-row>
+		
+	  </ion-card-content>
+
+	  <ion-row>
+		<ion-col><p>Business</p></ion-col>
+		<ion-col right>
+		  <button ion-button icon-right clear small>
+			Details
+		  </button>
+		</ion-col>
+	  </ion-row>
+	</ion-card>
 </ion-content>
