@@ -4,11 +4,11 @@ import { NavController } from 'ionic-angular';
 
 import { AddHomeLoan } from '../AddHomeLoan/addhomeloan';
 
-
+import { MortgageDetails } from '../mortgagedetails/mortgagedetail';
 
 @Component({
   selector: 'page-mortgage',
-  templateUrl: 'mortgage.html'
+  templateUrl: 'mortgage.html'	
 })
 
 export class Mortgage {
@@ -24,5 +24,8 @@ export class Mortgage {
   addHomeLoan() {
 	  this.navCtrl.push(AddHomeLoan);
   }
-
+ 
+  mortgageDetail(){
+         this.navCtrl.push(MortgageDetails);
+        }
 }
