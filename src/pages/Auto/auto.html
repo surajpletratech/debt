@@ -3,16 +3,55 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Auto Loans</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="addAutoLoan()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>	
+    <ion-title>Auto Loan</ion-title>
+	<ion-buttons end>
+		<button ion-button (click)="addAutoLoan()">
+			<ion-icon name="add-circle"></ion-icon>
+		</button>
+	</ion-buttons>	
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Auto Loans</h3>
- 
+  <ion-card *ngFor="let val of v1">
+
+	   <ion-item>
+		  <ion-icon name="car"></ion-icon>
+		<ion-row>
+     		<ion-col>
+				<h2>TATA Nexa</h2>
+			</ion-col>
+			<ion-col>
+				<h2>Auto Loan</h2>
+			</ion-col>
+		</ion-row>
+	  </ion-item>
+
+	  <ion-card-content>
+		<ion-row>
+			<ion-col>Loan amount : </ion-col> 
+			<ion-col>$300000</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>Remaining amount : </ion-col>
+			<ion-col>$250000</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>Rate : </ion-col>
+			<ion-col>3.25%</ion-col>
+		</ion-row>
+		
+	  </ion-card-content>
+
+	  <ion-row>
+		<ion-col><p>TATA Nexa</p></ion-col>
+		<ion-col right>
+		  <button ion-button icon-right clear small>
+			Details
+		  </button>
+		</ion-col>
+	  </ion-row>
+	</ion-card>
+
 </ion-content>
+
