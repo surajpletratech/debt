@@ -29,7 +29,7 @@
 
 	  <ion-card-content>
 		<ion-row>
-			<ion-col>Loam amount : </ion-col> 
+			<ion-col>Loan amount : </ion-col> 
 			<ion-col>$300000</ion-col>
 		</ion-row>
 		<ion-row>
@@ -46,9 +46,10 @@
 	  <ion-row>
 		<ion-col><p>310 Gorden Dr. Paramus</p></ion-col>
 		<ion-col right>
-		  <button ion-button icon-right clear small>
-			<div>Details</div>
-		  </button>
+     		<button ion-button clear small (click)="mortgageDetail()">
+			  Details
+		    </button>
+	      	
 		</ion-col>
 	  </ion-row>
 	</ion-card>
